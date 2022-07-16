@@ -28,13 +28,16 @@ Run `get_data.py` to download PCPNet data.
 Alternatively, Download the PCPNet data from this [link](http://geometry.cs.ucl.ac.uk/projects/2018/pcpnet/pclouds.zip) and place it in  `./data/pcpnet/` directory.
 
 ## Training
+when `k=256, batch_size=256`, we use 2 `Tesla V100`.
 ```
 python train_n_est.py
 ```
 
 ## Evaluation
 ```
+# To test the model and output all normal estimations for the dataset run
 python test_n_est.py
+# To evaluate the results and output a report 
 python evaluate.py
 ```
 
