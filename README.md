@@ -40,7 +40,7 @@ python test_n_est.py
 # To evaluate the results and output a report 
 python evaluate.py
 ```
-
+If you would like to use the given model, you can ref the [issue](https://github.com/UestcJay/GraphFit/issues/3#issuecomment-1537456649).
 ## Acknowledgement
 The code is heavily based on [DeepFit](https://github.com/sitzikbs/DeepFit).
 
