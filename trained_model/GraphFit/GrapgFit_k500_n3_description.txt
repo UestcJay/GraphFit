@@ -1,1 +1,0 @@
-My training run for multi-scale normal estimation.

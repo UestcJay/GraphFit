@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>GraphFit: Learning Multi-scale Graph-convolutional Representation for Point Cloud Normal Estimation
+</title>
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">GraphFit: Learning Multi-scale Graph-convolutional Representation for Point Cloud Normal Estimation</h1>
+      <h2>ECCV2022</h2>
+      <div class="btn-group-flex">
+        <a href="https://arxiv.org/abs/2207.11484" class="btn"><img src="./images/paper.svg" class="icon-paper"/>Paper</a>
+        <a href="https://github.com/UestcJay/GraphFit" class="btn"><img src="./images/paper.svg" class="icon-paper"/>code</a>
+        <a href="./media/poster.pdf" class="btn"><img src="./images/paper.svg" class="icon-paper"/>poster</a>
+        <!-- <a href="https://github.com/Runsong123/AdaFit" class="btn"><img src="./images/paper.svg" class="icon-paper"/></a> -->
+        <!-- <a href="" class="btn"><img src="assets/images/icons/dataset.svg" class="icon-dataset"/>H3DS dataset</a> -->
+      </div>
+      <div class="authors">
+        <p class="authors__name">Keqiang Li<sup>1,2</sup></p>,
+        <p class="authors__name">Mingyang Zhao<sup>1,3</sup></p>,
+        <p class="authors__name">Huaiyu Wu<sup>1</sup></p>,
+        <p class="authors__name">Dong-Ming Yan<sup>1</sup></p>,
+        <p class="authors__name">Zhen Shen<sup>1</sup></p>,
+        <p class="authors__name">Fei-Yue Wang<sup>1</sup></p>,
+        <p class="authors__name">Gang Xiong<sup>1</sup></p>
+      </div>
+      <div class="affiliations">
+        <p class="affiliation__name"><sup>1</sup>Institute of Automation, Chinese Academy of Sciences</p>,
+        <p class="affiliation__name"><sup>2</sup>University of Chinese Academy of Sciences</p>,
+        <p class="affiliation__name"><sup>3</sup>Beijing Academy of Artificial Intelligence</p>
+        <!-- <p class="affiliation__name"><sup>3</sup>Institut de Robòtica i Informàtica Industrial, CSIC-UPC</p> -->
+      </div>
+      <!-- <div>
+        <p>  (* Equal contribution) </p>
+      </div> -->
+    </header>
+
+    <!-- <main id="content" class="main-content" role="main"> -->
+      <!-- <p><img src="./images/teaser_new_colorbar.png" alt="" /></p> -->
+
+<h2 id="Abstract">Abstract</h2>
+
+<p>We propose a precise and efficient normal estimation method that can deal with noise and nonuniform density for unstructured 3D point clouds. Unlike existing approaches that
+    directly take patches and ignore the local neighborhood relationships, which make them susceptible to challenging regions such as sharp edges, we propose to learn graph convolutional feature representation for normal estimation, which emphasizes more local neighborhood geometry and effectively encodes intrinsic relationships. Additionally, we design a novel adaptive module based on the attention mechanism to integrate point features with their neighboring features, hence further enhancing the robustness of the proposed normal estimator against point density variations. To make it more distinguishable, we  introduce a multi-scale architecture in the graph block to learn richer  geometric features. Our method outperforms competitors with the state-of-the-art accuracy on various benchmark datasets, and is quite robust against noise, outliers, as well as the density variations.</p>
+
+<!-- <div class="container" align="center">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2 id="Abstract">Overview video</h2>
+        <hr style="margin-top:0px">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="750" height="421.875" src="https://www.youtube.com/embed/IEjB_ea7-KE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+   </div>
+</div>    -->
+
+<!-- <h2 id="Introduction">Method</h2>
+<p>Given the input point cloud, our target is to estimate a normal for every point.</p>
+
+<p><img src="/h3d-net/assets/images/method.png" alt="" /></p> -->
+
+<h2 id="Result comparison">Results</h2>
+
+<!-- <p>Results for PCPNet dataset and real-word SceneNN datasets.</p> -->
+
+
+<!-- <p>Next, we show full head 3D reconstructions from only 3 input images. In these examples, the camera poses have been regressed using a pre-trained <a href="https://openaccess.thecvf.com/content_ICCVW_2019/papers/GMDL/Ramon_Hyperparameter-Free_Losses_for_Model-Based_Monocular_Reconstruction_ICCVW_2019_paper.pdf">MRL model</a>, which minimizes the reprojection error. The masks have been estimated using <a href="https://arxiv.org/pdf/2005.09007.pdf">U2Net</a> and then have been manually refined.</p> -->
+
+<figure align="center">
+  <p align="center"><img src="./images/PCPNet_error_map.png" width="700" />
+  <figcaption> a). Errors of normal estimation on the PCPNet dataset.
+  </figcaption>
+  </p>
+</figure>
+
+
+<figure align="center">
+  <p align="center"><img src="./images/indoor.png" width="700" />
+  <figcaption> b). Errors of normal estimation on the SceneNN dataset.
+  </figcaption>
+  </p>
+</figure>
+
+<figure align="center">
+    <p align="center"><img src="./images/vis_nyu.png" width="700" />
+    <figcaption> c). Visualization of the normal estimation result on the NYU Depth V2
+        dataset.
+    </figcaption>
+    </p>
+  </figure>
+
+<!-- <p align="center">
+  <img src="./images/PCPNet_error_map.png" width="700" />
+</p>
+<p align="center">
+    <img src="./images/indoor.png" width="700" />
+</p> -->
+<!-- <p>We also provide a qualitative and quantitative comparison with respect to <a href="https://arxiv.org/abs/2003.09852">IDR</a> varying the number of available views. Note how H3D-Net effectively finds realistic and detailed solutions in both few-shot and many-shot scenarios.</p>
+
+<p align="center">
+  <img src="assets/images/h3dnet-idr.gif" />
+</p> -->
+
+
+
+<!-- <h2 id="downstreams target">downstreams target </h2> -->
+
+
+
+<h2>Application</h2>
+
+<figure align="center">
+  <p align="center"><img src="./images/Surface.png" width="700" />
+  <figcaption> a). The Poisson surface reconstruction using the estimated normals.
+  </figcaption>
+  </p>
+</figure>
+
+
+
+
+
+
+<!-- 
+<p align="center">
+  <img src="./images/Surface.png" width="700" />
+  <div style="text-align:center"><p3>The comparison of the Poisson surface reconstruction using the estimated normals from different methods.</p3></div>
+</p> -->
+
+<!-- <h2>Denoising</h2> -->
+<!-- <p align="center">
+    <img src="./images/denoise.png" width="700" />
+    <div style="text-align:center"><p5>Qualitative results of point cloud denoising. The first row shows the denoised point clouds while the second row shows the corresponding reconstructed surfaces.</p5></div>
+    <!-- <h3>denoise</h3> -->
+<!-- </p> --> 
+
+
+
+<h2 id="related-work">Related work</h2>
+
+<ol>
+  <li><a href="https://arxiv.org/abs/1710.04954">PCPNET: Learning Local Shape Properties from Raw Point Clouds (2018)</a></li>
+  <li><a href="https://arxiv.org/abs/2003.10826">DeepFit: 3D Surface Fitting via Neural Network Weighted Least Squares (2020)</a></li>
+  <li><a href="https://arxiv.org/abs/2108.05836">AdaFit: Rethinking Learning-based Normal Estimation on Point Clouds (2021)</a></li>
+</ol>
+
+<h2 id="bibtex">BibTeX</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{li2022graphfit,
+    title={GraphFit: Learning Multi-scale Graph-convolutional Representation 
+  for Point Cloud Normal Estimation},
+    author={Keqiang Li, Mingyang Zhao, Huaiyu Wu, Dong-Ming Yan, Zhen Shen, Fei-Yue Wang and Gang Xiong},
+    booktitle={European conference on computer vision},
+    year={2022}
+  },
+</code></pre></div></div>
+
+
+      <footer class="site-footer">
+        We use the code from https://crisalixsa.github.io/h3d-net/
+      </footer>
+    </main>
+  </body>
+</html>
